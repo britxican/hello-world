@@ -51,6 +51,13 @@ def main():
     for file in result:
         print(f'{file.download_url}')
         query3 = 'CielitoLindoAyAyAy'
+    
+    # Some extra code simply because
+    payload_tuples = [('key1', 'value1'), ('key1', 'value2')]
+    r1 = requests.post('https://httpbin.org/post', data=payload_tuples)
+    payload_dict = {'key1': ['value1', 'value2']}
+    r2 = requests.post('https://httpbin.org/post', data=payload_dict)
+    print(r1.text)
 
 
 if __name__ =='__main__':
